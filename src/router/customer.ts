@@ -5,7 +5,7 @@ export default [
   },
   {
     path: '/customer/member',
-    name: 'member11',
+    name: 'member',
     meta: {
       title: '会员管理'
     },
