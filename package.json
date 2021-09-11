@@ -1,0 +1,43 @@
+{
+  "name": "vite-pc-ts",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "lint": "eslint --ext .ts,.tsx src/**/*.ts",
+    "format": "prettier --write --parser typescript \"src/**/*.ts?(x)\"",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
+  },
+  "dependencies": {
+    "add": "^2.0.6",
+    "axios": "^0.21.4",
+    "element-plus": "^1.1.0-beta.9",
+    "mockjs": "^1.1.0",
+    "vue": "^3.2.6",
+    "vue-i18n": "^9.1.7",
+    "vue-router": "4",
+    "vuex": "^4.0.2",
+    "yarn": "^1.22.11"
+  },
+  "devDependencies": {
+    "@intlify/eslint-plugin-vue-i18n": "^0.15.0",
+    "@types/axios": "^0.14.0",
+    "@vitejs/plugin-vue": "^1.6.1",
+    "@vitejs/plugin-vue-jsx": "^1.1.8",
+    "@vue/compiler-sfc": "^3.2.6",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^7.17.0",
+    "prettier": "^2.4.0",
+    "sass": "^1.39.2",
+    "typescript": "^4.3.2",
+    "vite": "^2.5.4",
+    "vite-plugin-mock": "^2.9.6",
+    "vitepress": "^0.17.1",
+    "vue-tsc": "^0.2.2"
+  }
+}
