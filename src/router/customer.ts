@@ -8,7 +8,7 @@ export default [
     name: 'member',
     meta: {
       title: '会员管理'
-    },,
+    },
     component: () => import('@/views/customer/member/index.vue')
   }
 ]
