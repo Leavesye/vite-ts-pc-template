@@ -18,7 +18,12 @@ import extend from './extend'
 
 export default defineComponent({
   components: { extend },
-  props: ['table'],
+  props: {
+    table: {
+      type: Object,
+      default: {}
+    }
+  },
   setup(props) {
     // console.log(props,555)
   }

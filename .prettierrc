@@ -4,4 +4,3 @@ printWidth: 80
 trailingComma: 'none'
 arrowParens: 'avoid'
 jsxSingleQuote: true
-tabWidth: 2

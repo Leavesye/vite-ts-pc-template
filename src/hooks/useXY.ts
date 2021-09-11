@@ -1,6 +1,6 @@
 import { onBeforeUnmount, onMounted, ref } from 'vue'
 
-export default function getXY() {
+export default function getXY(): any {
   const x = ref('0')
   const y = ref('0')
   // 如果这个文件是ts， e的类型应该是 MouseEvent

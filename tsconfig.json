@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@": ["src/*"]
+    },
     "target": "esnext",
     "useDefineForClassFields": true,
     "module": "esnext",
@@ -12,5 +16,5 @@
     "lib": ["esnext", "dom"],
     "noImplicitAny": false
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/components/HelloWorld.jsx"]
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
 }

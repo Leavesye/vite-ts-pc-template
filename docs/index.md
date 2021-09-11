@@ -5,7 +5,7 @@ heroAlt: Logo image
 heroText: CRM SaaS版
 tagline: Hero subtitle
 actionText: Get Started
-actionLink: /codestyle/
+actionLink: /guide/techstack
 features:
   - title: Simplicity First
     details: Minimal setup with markdown-centered project structure helps you focus on writing.

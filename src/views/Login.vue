@@ -4,7 +4,6 @@
 </template>
 
 <script setup lang="tsx">
-
 const tableData = {
   data: [{ date: '2021-11-12', name: 'ys', address: '上海' }],
   columns: [
