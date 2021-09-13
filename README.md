@@ -98,7 +98,7 @@ web
 - Prettier
 - Vetur
 
-vscode 编辑器代码格式化参考配置 /文件/首选项/设置
+### vscode 编辑器代码格式化参考配置 /文件/首选项/设置
 
 ```json
 {
