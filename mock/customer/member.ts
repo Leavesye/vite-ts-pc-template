@@ -4,7 +4,7 @@ let members = [
   { id: 1, name: '张三', age: 10 },
   { id: 2, name: '李四', age: 12 }
 ]
-export default [
+const mockAPis: MockMethod[] = [
   {
     url: '/api/customer/getMembers',
     method: 'get',
@@ -21,7 +21,7 @@ export default [
     url: '/api/customer/getMemberById',
     method: 'get',
     response: ({ query, body }) => {
-      const member = members.find(o => o.id == query.id)
+      const member = members.find(o => o.id === query.id)
       return {
         code: 0,
         data: member,
@@ -64,7 +64,7 @@ export default [
     method: 'post',
     response: ({ query, body }) => {
       console.log(body)
-      members = members.filter(o => o.id != body)
+      members = members.filter(o => o.id !== body)
       return {
         code: 0,
         data: members,
@@ -72,4 +72,6 @@ export default [
       }
     }
   }
-] as MockMethod[]
+]
+
+export default mockAPis

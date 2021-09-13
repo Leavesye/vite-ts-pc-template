@@ -1,7 +1,7 @@
 // import Vue from 'vue'
 import axios, { AxiosInstance } from 'axios'
 
-const BASE_URL: string = import.meta.env.VITE_BASE_URL as string
+const BASE_URL: any = import.meta.env.VITE_BASE_URL
 // create an axios instance
 const service: AxiosInstance = axios.create({
   baseURL: BASE_URL,
