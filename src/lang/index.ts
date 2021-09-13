@@ -4,7 +4,7 @@ export default {
   en: {
     ...customer.en
   },
-  ch: {
-    ...customer.ch
+  zh: {
+    ...customer.zh
   }
 }

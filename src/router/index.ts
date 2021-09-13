@@ -1,5 +1,5 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import MainLayout from '@/views/layout/MainLayout.vue'
+import MainLayout from '@/components/layout/MainLayout.vue'
 import customer from './customer'
 
 const routes = [
@@ -19,7 +19,7 @@ const routes = [
     meta: {
       title: '登录'
     },
-    component: () => import(/* webpackChunkName: "login" */ '@/views/Login.vue')
+    component: () => import(/* webpackChunkName: "login" */ '@/views/login.vue')
   }
 ]
 

@@ -12,18 +12,6 @@
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs"
   },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.js": [
-      "prettier --write"
-    ],
-    "*.ts?(x)": [
-      "eslint",
-      "prettier --parser=typescript --write"
-    ]
-  },
   "dependencies": {
     "add": "^2.0.6",
     "axios": "^0.21.4",
@@ -36,7 +24,6 @@
     "yarn": "^1.22.11"
   },
   "devDependencies": {
-    "@intlify/eslint-plugin-vue-i18n": "^0.15.0",
     "@types/axios": "^0.14.0",
     "@vitejs/plugin-vue": "^1.6.1",
     "@vitejs/plugin-vue-jsx": "^1.1.8",

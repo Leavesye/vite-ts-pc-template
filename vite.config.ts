@@ -2,10 +2,12 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import { viteMockServe } from 'vite-plugin-mock'
+import localConfig from './local-config'
 
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command, mode }) => {
+  console.log(command, mode)
   return {
     plugins: [
       vue(), 
@@ -13,10 +15,9 @@ export default defineConfig(({ command, mode }) => {
       vueJsx(),
       // mock数据模拟
       viteMockServe({
-        // default
-        mockPath: 'mock',
+        mockPath: './mock',
         // 是否开启mock
-        localEnabled: true,
+        localEnabled: localConfig[mode]?.mockEnabled
       }),
     ],
     resolve: {

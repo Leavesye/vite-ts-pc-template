@@ -1,7 +1,7 @@
 // import Vue from 'vue'
 import axios, { AxiosInstance } from 'axios'
 
-const BASE_URL = import.meta.env.VITE_BASE_URL
+const BASE_URL: string = import.meta.env.VITE_BASE_URL as string
 // create an axios instance
 const service: AxiosInstance = axios.create({
   baseURL: BASE_URL,
@@ -23,7 +23,7 @@ service.interceptors.request.use(
 // response interceptor
 service.interceptors.response.use(
   response => {
-    return response
+    return response.data
   },
   error => {
     return Promise.reject(error)

@@ -4,17 +4,19 @@ import { createStore } from 'vuex'
 const store = createStore({
   state() {
     return {
-      count: 0
+      lang: 'zh'
     }
   },
   mutations: {
-    increment(state: any) {
-      state.count++
+    changeLang(state: any, lang) {
+      console.log(lang, 222)
+      state.lang = lang
     }
   },
   actions: {
-    increment({ commit }) {
-      commit('increment')
+    changeLang({ commit }, lang) {
+      console.log(lang, 1111)
+      commit('changeLang', lang)
     }
   }
 })

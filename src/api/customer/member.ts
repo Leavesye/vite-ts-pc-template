@@ -1,4 +1,4 @@
-import service from '@/utils/request'
+import service from '../../utils/request'
 
 const BASE_API = import.meta.env.VITE_APP_CUSTOMER_API
 
@@ -38,7 +38,7 @@ export const updateMember = data => {
 export const removeMember = data => {
   return service({
     url: `${BASE_API}/removeMember`,
-    method: 'get',
-    params: data
+    method: 'post',
+    data
   })
 }
