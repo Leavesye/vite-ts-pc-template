@@ -1,6 +1,6 @@
 module.exports = {
   lang: 'zh-cn',
-  title: '项目文档',
+  title: 'CRM SaaS',
   description: 'Vite & Vue powered static site generator.',
 
   themeConfig: {
@@ -8,8 +8,8 @@ module.exports = {
     docsDir: 'docs',
 
     editLinks: true,
-    editLinkText: 'Edit this page on GitHub',
-    lastUpdated: 'Last Updated',
+    editLinkText: '在 GitHub 上编辑此页面',
+    lastUpdated: '最后更新时间',
 
     algolia: {
       apiKey: 'c57105e511faa5558547599f120ceeba',
@@ -23,16 +23,16 @@ module.exports = {
     },
 
     nav: [
-      { text: 'Guide', link: '/codestyle', activeMatch: '^/$|^/guide/' },
-      {
-        text: 'Config Reference',
-        link: '/config/basics',
-        activeMatch: '^/config/'
-      },
-      {
-        text: 'Release Notes',
-        link: 'https://github.com/vuejs/vitepress/releases'
-      }
+      { text: 'Guide', link: '/guide/techstack', activeMatch: '^/$|^/guide/' }
+      // {
+      //   text: 'Config Reference',
+      //   link: '/config/basics',
+      //   activeMatch: '^/config/'
+      // },
+      // {
+      //   text: 'Release Notes',
+      //   link: 'https://github.com/vuejs/vitepress/releases'
+      // }
     ],
 
     sidebar: {
@@ -50,7 +50,8 @@ function getGuideSidebar() {
       children: [
         { text: '技术栈介绍', link: '/guide/techstack' },
         { text: '开始', link: '/guide/start' },
-        { text: 'vue3快速上手', link: '/guide/vue3' }
+        { text: 'vue3快速上手', link: '/guide/vue3' },
+        { text: 'TS快速上手', link: '/guide/ts' }
       ]
     },
     {
