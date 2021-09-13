@@ -1,39 +1,62 @@
 <template>
-  <h1>{{ t('message.Home') }}</h1>
-  <h1>{{ aboutUs }}</h1>
-  <el-button
-    type="primary"
-    @click="handleCreate"
-  >新增</el-button>
-  <el-form
-    :inline="true"
-    :model="search"
-    class="demo-form-inline"
-  >
-    <el-form-item label="姓名">
-      <el-input
-        v-model="search.name"
-        placeholder="姓名"
-      />
-    </el-form-item>
-    <el-form-item label="年龄">
-      <el-input
-        v-model="search.age"
-        placeholder="年龄"
-      />
-    </el-form-item>
-    <el-form-item>
+  <!-- 多语言 -->
+  <section>
+    <h1>多语言</h1>
+    <h4>{{ t('message.Home') }}</h4>
+    <h4>{{ aboutUs }}</h4>
+    <hr>
+  </section>
+  <!-- hook -->
+  <section>
+    <h1>hook点击页面触发坐标更新</h1>
+    <h4 style="color: red">x: {{ x }},
+      y: {{ y }}</h4>
+    <hr>
+  </section>
+  <!-- 表格 -->
+  <section>
+    <h1>表格</h1>
+    <hr>
+    <el-row>
+      <el-form
+        :inline="true"
+        :model="search"
+        class="demo-form-inline"
+      >
+        <el-form-item label="姓名">
+          <el-input
+            v-model="search.name"
+            placeholder="姓名"
+          />
+        </el-form-item>
+        <el-form-item label="年龄">
+          <el-input
+            v-model="search.age"
+            placeholder="年龄"
+          />
+        </el-form-item>
+        <el-form-item>
+          <el-button
+            type="primary"
+            @click="handleSearch"
+          >查询</el-button>
+        </el-form-item>
+      </el-form>
+    </el-row>
+    <el-row>
       <el-button
         type="primary"
-        @click="handleSearch"
-      >查询</el-button>
-    </el-form-item>
-  </el-form>
-  <BaseTable :table="tableData" />
-  <el-pagination
-    layout="prev, pager, next"
-    :total="50"
-  />
+        @click="handleCreate"
+      >新增</el-button>
+    </el-row>
+    <el-row>
+      <BaseTable :table="tableData" />
+      <el-pagination
+        layout="prev, pager, next"
+        :total="50"
+      />
+    </el-row>
+  </section>
 </template>
 
 <script lang="tsx">
@@ -42,6 +65,7 @@ import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { ElMessageBox, ElMessage } from 'element-plus'
 import { getMembers, removeMember } from '@/api/customer/member'
+import useMousePosition from '@/hooks/useMousePosition.ts'
 
 // 接口约束查询条件
 interface ISearchForm {
@@ -54,6 +78,7 @@ export default defineComponent({
     // hook函数
     const { t } = useI18n()
     const router = useRouter()
+    const { x, y } = useMousePosition()
 
     // 响应式变量
     const search: ISearchForm = reactive({
@@ -143,6 +168,8 @@ export default defineComponent({
       search,
       tableData,
       aboutUs,
+      x,
+      y,
       t,
       handleCreate,
       handleSearch,

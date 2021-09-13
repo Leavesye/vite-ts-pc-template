@@ -22,7 +22,7 @@
 </template>
 
 <script lang="tsx">
-import { defineComponent, onMounted, ref, toRaw } from 'vue'
+import { defineComponent, onMounted, ref } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import {
   getMemberById,
@@ -57,6 +57,7 @@ export default defineComponent({
         save = createMember
         p = form.value
       }
+      console.log(p)
       const res = await save(p).catch(e => console.log(e))
       console.log(res)
       router.go(-1)
@@ -68,8 +69,12 @@ export default defineComponent({
 
     // 生命周期钩子
     onMounted(async () => {
-      const res = await getMemberById(query).catch(e => console.log(e))
-      form.value = res.data
+      const { id } = query
+      if (id) {
+        const res = await getMemberById({ id }).catch(e => console.log(e))
+        console.log(res.data, 'fdf')
+        form.value = res.data
+      }
     })
     return {
       form,

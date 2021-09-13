@@ -55,7 +55,7 @@ yarn docs:serve
 ```
 
 web
-├── docs -- 项目文档 yarn docs:dev 可以开启本地编辑模式
+|── docs -- 项目文档 yarn docs:dev 可以开启本地编辑模式
 |—— mock -- 数据模拟用于无后端服务模式下的本地调试
 |—— public -- 网站公共资源
 | |—— favicon.ico -- 浏览器标签快捷图标
@@ -97,6 +97,43 @@ web
 - Eslint
 - Prettier
 - Vetur
+
+vscode 编辑器代码格式化参考配置
+
+```json
+{
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "vetur.format.defaultFormatter.html": "js-beautify-html",
+  "vetur.format.defaultFormatterOptions": {
+    "js-beautify-html": {
+      // 对属性进行换行。
+      // - auto: 仅在超出行长度时才对属性进行换行。
+      // - force: 对除第一个属性外的其他每个属性进行换行。
+      // - force-aligned: 对除第一个属性外的其他每个属性进行换行，并保持对齐。
+      // - force-expand-multiline: 对每个属性进行换行。
+      // - aligned-multiple: 当超出折行长度时，将属性进行垂直对齐。
+      // Maximum number of line breaks to be preserved in one chunk (0 disables)
+      "wrap_attributes": "force-expand-multiline",
+      // "wrap_line_length": 40, //多少字符换行
+      "max_preserve_newlines": 0
+    }
+  },
+  // 保存时自动格式化
+  "editor.formatOnSave": true,
+  "[vue]": {
+    "editor.defaultFormatter": "octref.vetur"
+  }
+}
+```
 
 ### 相关文档
 
