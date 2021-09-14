@@ -48,8 +48,7 @@ function getGuideSidebar() {
     {
       text: '指引',
       children: [
-        { text: '技术栈介绍', link: '/guide/techstack' },
-        { text: '开始', link: '/guide/start' },
+        { text: '前言', link: '/guide/techstack' },
         { text: 'vue3快速上手', link: '/guide/vue3' },
         { text: 'TS快速上手', link: '/guide/ts' },
         { text: 'vue2迁移到vue3', link: '/guide/vue2tovue3' }
