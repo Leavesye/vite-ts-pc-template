@@ -5,3 +5,5 @@ dist-ssr
 *.local
 .vscode
 local-config.ts
+yarn.lock
+yarn-error.log
